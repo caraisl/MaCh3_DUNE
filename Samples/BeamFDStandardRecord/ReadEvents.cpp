@@ -73,7 +73,9 @@ namespace dune::beamfd {
       ev.truth.nu.pdg = tixn.pdg;
       ev.truth.nu.pdg_unosc = tixn.pdgorig;
       ev.truth.nu.e = tixn.E;
+      ev.truth.nu.DNuPDG = tixn.pdg;
 
+      ev.isFHC = true;
       if (ev.reco.sample > 0) {
         events.push_back(ev);
       }

@@ -1,9 +1,8 @@
 ---
 General:
-  OutputFile: "DuneEventRates.root"
+  OutputFile: "DunePriorPredictiveOriginal.root"
   DUNESamples:
-   - "Configs/Samples/SampleHandler_FD_Beam.yaml"
-  # - "Configs/Samples/SampleHandler_ND.yaml"
+   - "Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml"
   # Nu-FIT
   OscillationParameters: [0.310, 0.582, 0.0224, 7.39E-5, 2.525E-3, -2.498, 1284.9, 2.848] #CUDAProb3
   # OscillationParameters: [0.310, 0.582, 0.0224, 7.39E-5, 2.525E-3, -2.498, 1284.9, 2.848,  0.5] #NuFAST
@@ -16,22 +15,12 @@ General:
 
   Systematics:
     XsecCovFile:
-      - "Configs/CovObjs/tdr_covs/Flux_ND+FD.yaml"
-     # - "Configs/CovObjs/tdr_covs/Flux_1param.yaml"
-     # - "Configs/CovObjs/tdr_covs/Xsec_ND+FD.yaml"
-     # - "Configs/CovObjs/tdr_covs/DetSysts_FD.yaml"
       - "Configs/CovObjs/OscCov_PDG2021_v2.yaml"
+      #- "Configs/CovObjs/BeamParameters2026.yaml"
+      - "Configs/CovObjs/tdr_covs/Flux_FD.yaml"
     XsecCovName: "xsec_cov"
     XsecStepScale: 0.05
-    XsecAtGen: false
-    NDCovFile: "Configs/CovObjs/tdr_covs/det_sys_cov.root"
-    # Whether to use `nd_all_frac_cov` in det_sys_cov.root. Default: false
-    UseCombinedNDCov: false
-    XsecFix: ["baseline", "density"]
 
-  # Shared nuosc objects for all BeamFD samples to reduce binned calculations
-  # SharedNuOscillatorObject:
-  #   BeamFD: "Configs/NuOsc/CUDAProb3Linear_binned.yaml"
 
   Fitter:
     FitTestLikelihood: false
@@ -46,14 +35,14 @@ General:
   Debug: No
 
 SigmaVar:
-  # Values of sigma you want to perform, it must contain 0!
-  SigmaArray: [-3, -1, 0, 1, 3]
-  # name of params you want to skip
- # SkipVector: ["b_1*", "b_2*", "b_3*", "b_4*"]
-
-  # Allows to overwrite default 1,3 sigma range, useful for cross-fitter comparison
-  #CustomRange:
-   # Norm_Param_0: { "-3": 0.25, "-1": 0.5, "1": 1.25, "3": 1.5 }
+  # whether to separate by mach3 mode
+  PlotByMode: false
+  # whether to seaparate by osc channel
+  PlotByChannel: false
+  # list of parameters to skip, can include glob patterns e.g: MyParamPrefix_*
+  # SkipVector: [sin2th_12, sin2th_23, sin2th_13, delm2_12, delm2_23, delta_cp]
+  # parameter values
+  SigmaArray: [-1,-0.5,0,0.5,1]
 
 # LLH Scan settings
 LLHScan:
@@ -75,11 +64,11 @@ Tests:
   TestResultsFile: tests/test_results/EventRatesV2TDR.txt
 
 Predictive:
-  # Number of throws from MCMC you want to perform (aim for something like 2k/5k)
+# Number of throws from MCMC you want to perform (aim for something like 2k/5k)
   Ntoy: 1000
-  #Use Full LLH or only sample contribution based on discussion with Asher we almost always only want the sample likelihood
+#Use Full LLH or only sample contribution based on discussion with Asher we almost always only want the sample likelihood
   FullLLH: false
-  #if false will run posterior predictive
+#if false will run posterior predictive
   PriorPredictive: true
   # number of burn in steps
   BurnInSteps: 1000

@@ -37,9 +37,11 @@ BeamFD_numode_CCNumuLike:
     # enum Sample { kRejected = 0, kNuMuCCLike, kNuECCLike, kNCLike };
     - KinematicStr: RecoSample
       Bounds: [0.5, 1.5]
+    - KinematicStr: NuPDG 
+      Bounds: [13.5, 14.5] 
 
   Binning:
-    VarStr: RecoNeutrinoEnergy
+    VarStr: TrueNeutrinoEnergy
     Uniform: true
     BinEdges: { linspace: { nb: 40, low: 0, up: 8 } }
 

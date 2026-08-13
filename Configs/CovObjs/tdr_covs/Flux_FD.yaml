@@ -123,7 +123,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -255,7 +255,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -387,7 +387,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -519,7 +519,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -651,7 +651,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -783,7 +783,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -915,7 +915,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1047,7 +1047,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1179,7 +1179,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1311,7 +1311,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1443,7 +1443,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1575,7 +1575,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1707,7 +1707,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1839,7 +1839,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -1971,7 +1971,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2103,7 +2103,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2235,7 +2235,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2367,7 +2367,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2499,7 +2499,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2631,7 +2631,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2763,7 +2763,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -2895,7 +2895,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3027,7 +3027,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3159,7 +3159,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3291,7 +3291,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3423,7 +3423,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3555,7 +3555,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3687,7 +3687,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3819,7 +3819,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -3951,7 +3951,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4083,7 +4083,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4215,7 +4215,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4347,7 +4347,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4479,7 +4479,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4611,7 +4611,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4743,7 +4743,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -4875,7 +4875,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5007,7 +5007,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5139,7 +5139,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5271,7 +5271,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5403,7 +5403,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5535,7 +5535,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5667,7 +5667,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5799,7 +5799,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -5931,7 +5931,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6063,7 +6063,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6195,7 +6195,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6327,7 +6327,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6459,7 +6459,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6591,7 +6591,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6723,7 +6723,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6855,7 +6855,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -6987,7 +6987,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7119,7 +7119,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7251,7 +7251,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7383,7 +7383,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7515,7 +7515,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7647,7 +7647,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7779,7 +7779,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -7911,7 +7911,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8043,7 +8043,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8175,7 +8175,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8307,7 +8307,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8439,7 +8439,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8571,7 +8571,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8703,7 +8703,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8835,7 +8835,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -8967,7 +8967,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9099,7 +9099,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9231,7 +9231,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9363,7 +9363,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9495,7 +9495,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9627,7 +9627,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9759,7 +9759,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -9891,7 +9891,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10023,7 +10023,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10155,7 +10155,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10287,7 +10287,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10419,7 +10419,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10551,7 +10551,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10683,7 +10683,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10815,7 +10815,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -10947,7 +10947,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11079,7 +11079,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11211,7 +11211,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11343,7 +11343,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11475,7 +11475,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11607,7 +11607,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11739,7 +11739,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -11871,7 +11871,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -14
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12003,7 +12003,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12135,7 +12135,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12267,7 +12267,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12399,7 +12399,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12531,7 +12531,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12663,7 +12663,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12795,7 +12795,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - 12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -12927,7 +12927,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13059,7 +13059,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13191,7 +13191,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13323,7 +13323,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13455,7 +13455,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13587,7 +13587,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:
@@ -13719,7 +13719,7 @@ Systematics:
     NeutrinoFlavourUnosc:
     - -12
     ParameterBounds:
-    - -9999.0
+    - 0.0
     - 9999.0
     ParameterGroup: Flux
     ParameterValues:

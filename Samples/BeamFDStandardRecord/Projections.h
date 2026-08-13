@@ -19,8 +19,10 @@ namespace dune::beamfd {
   X(IsCC)                                                                      \
   X(Mode)                                                                      \
   X(RecoSample)                                                                \
-  X(RecoNeutrinoEnergy)
-
+  X(RecoNeutrinoEnergy)                                                 \
+  X(NuPDG)                                                              \
+  X(IsFHC)
+  
 #define X(a) k##a,
 
 /// @brief Enum to identify kinematics
@@ -52,6 +54,10 @@ inline const double *ResolveKinematicEventMember(KinematicTypes KinPar,
     return &ev.truth.is_cc;
   case kMode:
     return &ev.truth.mach3_mode;
+  case kNuPDG:
+    return &ev.truth.nu.DNuPDG;
+  case kIsFHC:
+    return &ev.isFHC;
 
 
   case kRecoSample:

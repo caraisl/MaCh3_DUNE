@@ -1,0 +1,200 @@
+#########################################
+DiagMCMC:
+  ExcludedTypes: []
+  ExcludedNames: []
+  nBatches: 20
+  nLags: 10000
+  PlotRelativeToPrior: "false"
+
+
+#########################################
+ProcessMCMC:
+  #Select which parameter names to remove using name, it accepts wildcards
+  ExcludedNames: []
+  #ExcludedNames: ["Norm_*"]
+  #Select which parameter to remove based on to which group they belong, like Xsec, Flux or Osc
+  ExcludedGroups: []
+  #ExcludedNames: ["Osc"]
+  #Select which parameters blocks to reject for example ND and FD detector, look for starting string
+  # WARNING this is used only for Legacy parameters i.e. one which do not use parameterHandlerGeneric
+  ExcludedTypes: []
+  # Allow to decrease number of entries if chain is HUUGE
+  #MaxEntries = 10000
+
+  #AdditionalCuts
+  Posterior1DCut: ""
+  #Posterior1DCut: "delm2_23 > 0"
+
+  #Basic settings
+  PlotRelativeToPrior: false
+  PrintToPDF: true
+  #if false it will not plot error band for parameters with flat prior
+  PlotErrorForFlatPrior: false
+  FancyNames: true
+  PlotBinValue: false
+
+  #Correlation related
+  Smoothing: true
+
+  #Functionality 1D
+  MakeCredibleIntervals: true
+  CalcBayesFactor: true
+  CalcSavageDickey: true
+  CalcBipolarPlot: false
+  CalcParameterEvolution: true
+
+  #Functionality 2D
+  PlotCorr: true
+  MakeSubOptimality: ["false", 100]
+  MakeViolin: true
+  MakeCredibleRegions: false
+  GetTrianglePlot: true
+  #Perform some covariance stability test
+  DiagnoseCovarianceMatrix: false
+  # Assign weight to each mcmc step according to new prior
+  ReweightPrior: false
+  #Perform Kolmogorov Smirnov test, only works when at least two files are being processed
+  PerformKStest: true
+
+  #KS: Credible Intervals/Regions Cosmetic, code has default values so even if you don't pass anything still code will produce fancy plots :)
+  CredibleIntervals: [0.99, 0.90, 0.68]
+  #In case of sigma, please set CredibleInSigmas to true first
+  #CredibleIntervals: [3, 2, 1]
+  #kCyan+4, kCyan-2, kCyan-10
+  CredibleIntervalsColours: [436, 430, 422]
+
+  #If true Credible intervals should be in percentage
+  CredibleInSigmas: false
+  CredibleRegions: [0.99, 0.90, 0.68]
+  #In case of sigma, please set CredibleInSigmas to true first
+  #CredibleRegions: [3, 2, 1]
+  # kDashed, kSolid, kDotted
+  CredibleRegionStyle: [2, 1, 3]
+  #kGreen-3, kGreen-10, kGreen
+  CredibleRegionColor: [413, 406, 416]
+
+  #KS: Plot only 2D posteriors with correlations greater than 0.2
+  Post2DPlotThreshold: 0.2
+
+  # Used for diagnostic covariance matrix
+  NIntervals: 5
+
+  BayesFactor:
+    # Goes as follows: ParamName Name[Model 1, Model 2], Model1[lower, upper ], Model2[lower, upper ]
+    - ["delm2_23", ["IH", "NH"], [-0.01, 0], [0, 0.01]]
+    - ["sin2th_23", ["LO", "UO"], [0, 0.5], [0.5, 1]]
+
+  SavageDickey:
+    - ["BinnedSplineParam1", 1.0, [0, 2]]  # Last array doesn't matter as parameter has Gaussian
+
+  BipolarPlot:
+    - ["BinnedSplineParam1", [0, 1]]
+
+  #KS: Feel free to pass whatever combination you like
+  TrianglePlot:
+    - ["Test", ["Norm_Param_0", "Norm_Param_1", "BinnedSplineParam1", "BinnedSplineParam2"]]
+
+  #First is parameter name and second number of intervals
+  ParameterEvolution:
+    - ["Norm_Param_0", 20]
+  # Technique to reduce size of chains by saving only every N-th step. Help reduce size while having good autocorrelations.
+  Thinning: [false, 100]
+
+  #First param name, then new prior and new prior error
+  # apply reactor constraints [vector of param names] [vector of new central value] [vector of new prior errors]
+  PriorReweighting: [ ["sin2th_13"], [0.0220], [0.0007] ]
+  #Fancy example, not physics motivated but to show functionality
+  #PriorReweighting: [ ["MAQE", "Pauli_Blocking_C_nu"], [1.05, 0.1], [ 0.04, 0.5] ]
+
+  # This allows to specify custom bin edges for usual 1D plotting
+  CustomBinEdges:
+    delta_cp: [-3.141592, 3.141592]
+  # Calculate Jarlskog invariant and make plots
+  JarlskogAnalysis: true
+  # Calculate PMNS elements and save based on posterior distribution
+  ProducePMNSElements: true
+  # Calculate and write Unitarity Triangles
+  ProduceUnitarityTriangles: true
+  # Produce fancy looking Pie or Clock Plot for Delta CP
+  MakePiePlot: true
+#########################################
+GetPenaltyTerm:
+  PenaltySets: ["Norm", "Spline"]
+
+  #KS: Goes as vector with names based on which we select, true or false whether we want to be inclusive or exclusive and fancy name
+  Norm:
+    - ["Norm_Param"]
+    - false
+    - "-logL_{Norm}"
+  Spline:
+    - ["BinnedSplineParam"]
+    - false
+    - "-logL_{Spline}"
+
+
+#########################################
+PlotSigmaVariation:
+  #ParamNames: ["BinnedSplineParam1", "BinnedSplineParam2"]
+  Coulour: [632, 416]
+#########################################
+PredictivePlotting:
+  FileTitle: ["Posterior Predictive", "Prior Predictive"]
+  PosteriorColor: [632, 600] # kRed, kBlue
+  RelevantModesName: ["CCQE", "CC2p2h","CC1pipm"]
+  # kRed, kMagenta+2, kGreen+1
+  RelevantModesColors: [632, 618, 417]
+
+#########################################
+MatrixPlotter:
+  Titles: [
+    "Norm",
+    "Spline",
+  ]
+
+  Norm: ["Norm_Param_0", "Norm_Param_1"
+  ]
+
+  Spline: ["BinnedSplineParam1", "BinnedSplineParam2"
+  ]
+
+
+
+#########################################
+SmearChain:
+  Smear: [ ["delm2_23", "delta_cp"], [2.70e-5, 0.01]]
+  SaveUnsmearedBranch: false
+
+
+#########################################
+# Umbrella Sampling Configuration
+# Convergence parameters
+UmbrellaSolver:
+  max_iterations: 200000
+  tolerance: 1e-10
+  print_frequency: 500
+  # Performance options
+  use_openmp: true
+
+  dynamic_files: true
+  dynamic_pattern: "umbrella/"
+  dynamic_n_windows: 60
+
+  # Output file
+  output_file: "umbrella_output.root"
+
+  # Variable of interest (branch name)
+  variable_of_interest: "delta_cp"
+
+  # Manual window configuration (if dynamic_files is false)
+  windows:
+    - name: "window_0"
+      center: 0.0
+      width: 0.04
+      
+    - name: "window_1" 
+      center: 0.17453292519943295
+      width: 0.04
+
+  input_files:
+    - "path/to/umbrella_window_0.root"
+    - "path/to/umbrella_window_1.root"

@@ -1,3 +1,4 @@
+
 #pragma once
 
 #include <array>
@@ -16,7 +17,7 @@ struct CAFEventInfo {
 
     struct Neutrino {
       int pdg, pdg_unosc;
-      double e;
+      double e, DNuPDG;
     } nu;
 
   } truth;
@@ -38,6 +39,7 @@ struct EventInfo : public CAFEventInfo {
   size_t tag_id;
   bool is_numode;
   int sample;
+  double isFHC;
 
   struct SystInfo {
     struct Flux {

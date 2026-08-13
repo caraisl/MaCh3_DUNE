@@ -1,0 +1,29 @@
+---
+Systematics:
+- Systematic:
+    SampleNames:
+    - BeamFD*
+    Error: 0.123224219401
+    FlatPrior: false
+    KinematicCuts:
+    - TrueNeutrinoEnergy:
+      - 0.0
+      - 0.5
+    - IsFHC:
+      - 0.9
+      - 1.1
+    Names:
+      FancyName: b_104
+      ParameterName: b_104
+    NeutrinoFlavourUnosc:
+    - 14
+    ParameterBounds:
+    - 0.0
+    - 9999.0
+    ParameterGroup: Flux
+    ParameterValues:
+      Generated: 1.0
+      PreFitValue: 1.0
+    StepScale:
+      MCMC: 0.3
+    Type: Norm
