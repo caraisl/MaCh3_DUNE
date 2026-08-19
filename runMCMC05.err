@@ -1,0 +1,4 @@
+build/bin/setup.MaCh3DUNE.sh: line 9: cd: /mercury/data3/clewis/MaCh3_DUNE/build/bin: No such file or directory
+build/bin/setup.MaCh3DUNE.sh: line 33: cd: /mercury/data3/clewis/MaCh3_DUNE/build/lib: No such file or directory
+build/bin/setup.MaCh3DUNE.sh: line 33: cd: /mercury/data3/clewis/MaCh3_DUNE/build/lib64: No such file or directory
+/scratch/condor/dir_3663597/scratch/runMCMC.sh: line 6: Fit: command not found

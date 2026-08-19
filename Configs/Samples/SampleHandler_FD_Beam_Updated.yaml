@@ -5,18 +5,15 @@ BinningFile: "Configs/Samples/BeamParameterBinning.yaml"
 InputFiles:
   PrepSplineFile: false
 
-# number of events to skip when reading in the files. Default: 1 (no downsampling)
-DownsamplingStep: 1
-
 NuOsc:
   NuOscConfigFile: "Configs/NuOsc/CUDAProb3Linear.yaml"
   EqualBinningPerOscChannel: false
 
 Samples: [
   "BeamFD_FHC_numu",
-#  "BeamFD_FHC_nue",
-#  "BeamFD_RHC_numu",
-#  "BeamFD_RHC_nue",
+  #"BeamFD_FHC_nue",
+  #"BeamFD_RHC_numu",
+  #"BeamFD_RHC_nue",
 ]
 
 BeamFD_FHC_nue:
@@ -36,9 +33,9 @@ BeamFD_FHC_nue:
       Bounds: [0.85, 999.]
 
   Binning:
-    VarStr: "RecoNeutrinoEnergy"
+    VarStr: "TrueNeutrinoEnergy"
     Uniform: true
-    BinEdges: [0., 0.5, 1., 1.25, 1.5, 1.75, 2., 2.25, 2.5, 2.75, 3., 3.25, 3.5, 3.75, 4., 5., 6., 10.]
+    BinEdges: { linspace: { nb: 40, low: 0, up: 8 } }
 
   DUNESampleBools:
     iselike: yes
@@ -144,7 +141,7 @@ BeamFD_FHC_numu:
   Binning:
     VarStr: "TrueNeutrinoEnergy"
     Uniform: true
-    BinEdges: [0., 0.5, 1., 1.25, 1.5, 1.75, 2., 2.25, 2.5, 2.75, 3., 3.25, 3.5, 3.75, 4., 5., 6., 10.]
+    BinEdges: { linspace: { nb: 40, low: 0, up: 8 } }
 
   DUNESampleBools:
     iselike: no
@@ -247,7 +244,7 @@ BeamFD_RHC_nue:
       Bounds: [0.85, 999]
 
   Binning:
-    VarStr: "RecoNeutrinoEnergy"
+    VarStr: "TrueNeutrinoEnergy"
     Uniform: true
     BinEdges: [0., 0.5, 1., 1.25, 1.5, 1.75, 2., 2.25, 2.5, 2.75, 3., 3.25, 3.5, 3.75, 4., 5., 6., 10.]
 
@@ -351,7 +348,7 @@ BeamFD_RHC_numu:
       Bounds: [0.5, 999]
 
   Binning:
-    VarStr: "RecoNeutrinoEnergy"
+    VarStr: "TrueNeutrinoEnergy"
     Uniform: true
     BinEdges: [0., 0.5, 1., 1.25, 1.5, 1.75, 2., 2.25, 2.5, 2.75, 3., 3.25, 3.5, 3.75, 4., 5., 6., 10.]
 

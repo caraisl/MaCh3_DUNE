@@ -1,0 +1,15 @@
+executable              = runMCMC.sh
+arguments               = "0.025" 
+log                     = runMCMC025.log
+output                  = runMCMC025.out
+error                   = runMCMC025.err 
+transfer_input_files    = .
+should_transfer_files   = Yes
+when_to_transfer_output = ON_EXIT
+ 
+request_cpus            = 8
+request_memory          = 512M
+request_disk            = 2G
+  
+queue
+    

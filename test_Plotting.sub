@@ -1,0 +1,18 @@
+
+executable              = /mercury/data3/clewis/MaCh3_DUNE/build/bin/PlotSigmaVariation
+
+log                     = test.log
+output                  = test.out
+error                   = test.err
+
+arguments               = "DunePriorPredictiveNew.root /mercury/data3/clewis/MaCh3Tutorial/build/bin/TutorialDiagConfig.yaml"
+
+transfer_input_files    = DunePriorPredictiveNew.root, /mercury/data3/clewis/MaCh3Tutorial/build/bin/TutorialDiagConfig.yaml
+should_transfer_files   = IF_NEEDED
+when_to_transfer_output = ON_EXIT
+
+request_cpus            = 10
+request_memory          = 512M
+request_disk            = 1G
+
+queue

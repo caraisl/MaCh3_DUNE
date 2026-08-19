@@ -1,0 +1,20 @@
+cat: write error: Broken pipe
+Warning in <TClass::Init>: no dictionary for class genie::NtpMCEventRecord is available
+Warning in <TClass::Init>: no dictionary for class genie::NtpMCRecordI is available
+Warning in <TClass::Init>: no dictionary for class genie::NtpMCRecHeader is available
+Warning in <TClass::Init>: no dictionary for class genie::EventRecord is available
+Warning in <TClass::Init>: no dictionary for class genie::GHepRecord is available
+Warning in <TClass::Init>: no dictionary for class genie::Interaction is available
+Warning in <TClass::Init>: no dictionary for class genie::InitialState is available
+Warning in <TClass::Init>: no dictionary for class genie::Target is available
+Warning in <TClass::Init>: no dictionary for class genie::ProcessInfo is available
+Warning in <TClass::Init>: no dictionary for class genie::Kinematics is available
+Warning in <TClass::Init>: no dictionary for class pair<genie::EKineVar,double> is available
+Warning in <TClass::Init>: no dictionary for class genie::XclsTag is available
+Warning in <TClass::Init>: no dictionary for class genie::KPhaseSpace is available
+Warning in <TClass::Init>: no dictionary for class genie::GHepParticle is available
+Warning in <TStreamerInfo::BuildOld>: Cannot convert caf::SRSAND::ixn from type: vector<caf::SRGArInt> to type: vector<caf::SRSANDInt>, skip element
+Warning in <TStreamerInfo::BuildOld>: Cannot convert caf::SRNDTrackAssn::minervaid from type: caf::SRMINERvA to type: caf::SRMINERvAID, skip element
+Warning in <TStreamerInfo::BuildOld>: Cannot convert caf::SRNDShowerAssn::minervaid from type: caf::SRMINERvA to type: caf::SRMINERvAID, skip element
+Error in <TBranchElement::SetAddress>: For nd.sand.ixn, we can not convert vector<caf::SRGArInt> into vector<caf::SRSANDInt>
+

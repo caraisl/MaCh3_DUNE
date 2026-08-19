@@ -1,0 +1,1480 @@
+Sourcing MaCh3 Core
+Sourcing NuOscillator
+Here 1[Monitor.cpp][info] ##################################
+[Monitor.cpp][info] Welcome to:  
+[Monitor.cpp][info]   __  __        _____ _     ____  
+[Monitor.cpp][info]  |  \/  |      / ____| |   |___ \ 
+[Monitor.cpp][info]  | \  / | __ _| |    | |__   __) |
+[Monitor.cpp][info]  | |\/| |/ _` | |    | '_ \ |__ < 
+[Monitor.cpp][info]  | |  | | (_| | |____| | | |___) |
+[Monitor.cpp][info]  |_|  |_|\__,_|\_____|_| |_|____/ 
+[Monitor.cpp][info] Version: 2.6.0
+[Monitor.cpp][info] ##################################
+[Monitor.cpp][info] Using following CPU:
+[Monitor.cpp][info] model name	: Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz
+[Monitor.cpp][info] cpu MHz		: 2696.498
+[Monitor.cpp][info] Architecture:                            x86_64
+[Monitor.cpp][info] L1d cache:                               512 KiB (16 instances)
+[Monitor.cpp][info] L1i cache:                               512 KiB (16 instances)
+[Monitor.cpp][info] L2 cache:                                4 MiB (16 instances)
+[Monitor.cpp][info] L3 cache:                                40 MiB (2 instances)
+[Monitor.cpp][info] Thread(s) per core:                      2
+[Monitor.cpp][info] CPU(s):                                  32
+[Monitor.cpp][info] With available threads                8
+[Manager.cpp][info] Setting config to be: build/Configs/EventRates_BeamFDStandardRecord.yaml
+[Manager.cpp][info] Config is now: 
+[Monitor.cpp][info] General:
+[Monitor.cpp][info]   OutputFile: DuneMCMCOutput.root
+[Monitor.cpp][info]   DUNESamples:
+[Monitor.cpp][info]     - Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml
+[Monitor.cpp][info]   OscillationParameters: [0.310, 0.582, 0.0224, 7.39E-5, 2.525E-3, -2.498, 1284.9, 2.848]
+[Monitor.cpp][info]   OscillatorConfigName: Configs/OscillatorObj.yaml
+[Monitor.cpp][info]   Systematics:
+[Monitor.cpp][info]     XsecCovFile:
+[Monitor.cpp][info]       - Configs/CovObjs/OscCov_PDG2021_v2.yaml
+[Monitor.cpp][info]       - Configs/CovObjs/BeamParameters2026.yaml
+[Monitor.cpp][info]     XsecCovName: xsec_cov
+[Monitor.cpp][info]     XsecStepScale: 0.05
+[Monitor.cpp][info]   Fitter:
+[Monitor.cpp][info]     FitTestLikelihood: false
+[Monitor.cpp][info]   MCMC:
+[Monitor.cpp][info]     NSteps: 100
+[Monitor.cpp][info]     AutoSave: 10000
+[Monitor.cpp][info]   Output:
+[Monitor.cpp][info]     FileName: TestEventRates.root
+[Monitor.cpp][info]     OUTPUTNAME: TestLLH.root
+[Monitor.cpp][info]   ProcessMCMC: No
+[Monitor.cpp][info]   Seed: 0
+[Monitor.cpp][info]   Debug: No
+[Monitor.cpp][info] SigmaVar:
+[Monitor.cpp][info]   PlotByMode: false
+[Monitor.cpp][info]   PlotByChannel: false
+[Monitor.cpp][info]   SigmaArray: [-1, -0.5, 0, 0.5, 1]
+[Monitor.cpp][info] LLHScan:
+[Monitor.cpp][info]   LLHScanBySample: false
+[Monitor.cpp][info]   LLHScanPoints: 10
+[Monitor.cpp][info]   ScanRanges: ~
+[Monitor.cpp][info] Tests:
+[Monitor.cpp][info]   SkipChecks: False
+[Monitor.cpp][info]   TestResultsFile: tests/test_results/EventRatesV2TDR.txt
+[Monitor.cpp][info] Predictive:
+[Monitor.cpp][info]   Ntoy: 1000
+[Monitor.cpp][info]   FullLLH: false
+[Monitor.cpp][info]   PriorPredictive: true
+[Monitor.cpp][info]   BurnInSteps: 1000
+[Monitor.cpp][info]   PosteriorFile: DuneMCMCOutput.root
+[Monitor.cpp][info]   ThrowParamGroupOnly: [Flux]
+[Monitor.cpp][info]   ThrowSingleParams: []
+[Monitor.cpp][info]   StandardFluctuation: true
+[Monitor.cpp][info]   DebugHistograms: true
+[Monitor.cpp][info]   ParameterBounds: []
+[Monitor.cpp][info]   ByMode: false
+Here 2Here 3[MaCh3Factory.h][info] Initialising xsec_cov matrix
+[ParameterHandlerGeneric.cpp][info] Constructing instance of ParameterHandler using
+[ParameterHandlerGeneric.cpp][info] Configs/CovObjs/OscCov_PDG2021_v2.yaml
+[ParameterHandlerGeneric.cpp][info] Configs/CovObjs/BeamParameters2026.yaml
+[ParameterHandlerGeneric.cpp][info] as an input
+[ParameterHandlerGeneric.cpp][info] Principal component analysis but given the threshold for the principal components to be less than 0, or greater than (or equal to) 1. This will not work
+[ParameterHandlerGeneric.cpp][info] Please specify a number between 0 and 1
+[ParameterHandlerGeneric.cpp][info] You specified: 
+[ParameterHandlerGeneric.cpp][info] Am instead calling the usual non-PCA constructor...
+[ParameterHandlerBase.cpp][info] Enabling Flipping for parameter sin2th_23 with value 0.5112
+[ParameterHandlerBase.cpp][info] Enabling Flipping for parameter delm2_23 with value 0
+[ParameterHandlerBase.cpp][info] Enabling CircularBounds for parameter delta_cp with range [-3.141592, 3.141592]
+[ParameterTunes.cpp][info] Found 1 tunes:
+[ParameterTunes.cpp][info]   Tune 0 Generated
+[ParameterHandlerGeneric.cpp][info] Created covariance matrix from files: 
+[ParameterHandlerGeneric.cpp][info] Configs/CovObjs/OscCov_PDG2021_v2.yaml 
+[ParameterHandlerGeneric.cpp][info] Configs/CovObjs/BeamParameters2026.yaml 
+[ParameterHandlerGeneric.cpp][info] ----------------
+[ParameterHandlerGeneric.cpp][info] Found 74 systematics parameters in total
+[ParameterHandlerGeneric.cpp][info] ----------------
+[ParameterHandlerGeneric.cpp][info] #################################################
+[ParameterHandlerGeneric.cpp][info] Printing ParameterHandlerGeneric:
+[ParameterHandlerGeneric.cpp][info] ============================================================================================================================================================
+[ParameterHandlerGeneric.cpp][info] #     |  Name                                     |  Prior      |  Error      |  Lower      |  Upper      |  StepScale  |  SampleNames          |  Type      
+[ParameterHandlerGeneric.cpp][info] ------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ParameterHandlerGeneric.cpp][info] 0     |  sin2th_12                                |  0.307      |  +/- 0.01   |  0          |  1          |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 1     |  sin2th_23                                |  0.546      |  +/- 0.02   |  0          |  1          |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 2     |  sin2th_13                                |  0.022      |  +/- 0.00   |  0          |  1          |  5          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 3     |  delm2_12                                 |  7.53e-05   |  +/- 0.00   |  -999       |  999        |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 4     |  delm2_23                                 |  0.002536   |  +/- 0.00   |  -999       |  999        |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 5     |  delta_cp                                 |  -1.601     |  +/- 6.28   |  -999       |  999        |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 6     |  baseline                                 |  1284.9     |  +/- 0.01   |  0          |  9999       |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 7     |  density                                  |  2.6        |  +/- 0.01   |  0          |  999        |  1          |  BeamFD*, ATM         |  Oscillation
+[ParameterHandlerGeneric.cpp][info] 8     |  TargetUpstreamDegredation                |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 9     |  TargetTiltTransverseY                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 10    |  TargetTiltTransverseX                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 11    |  TargetLength                             |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 12    |  TargetDisplaceTransverseY                |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 13    |  TargetDisplaceTransverseX                |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 14    |  TargetDensity                            |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 15    |  ProtonBeamTransverseY                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 16    |  ProtonBeamTransverseX                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 17    |  ProtonBeamRadius                         |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 18    |  ProtonBeamAngleY                         |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 19    |  ProtonBeamAngleX                         |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 20    |  HornWaterLayerThickness                  |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 21    |  HornCurrent                              |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 22    |  HornCTiltTransverseY                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 23    |  HornCTiltTransverseX                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 24    |  HornCEllipticityXInducedBField           |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 25    |  HornCEccentricityXInducedBField          |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 26    |  HornCDisplaceLongitudinalZ               |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 27    |  HornBTiltTransverseY                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 28    |  HornBTiltTransverseX                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 29    |  HornBEllipticityXInducedBField           |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 30    |  HornBDisplaceLongitudinalZ               |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 31    |  HornATiltTransverseY                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 32    |  HornATiltTransverseX                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 33    |  HornAEllipticityXInducedBField           |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 34    |  HornAEccentricityXInducedBField          |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 35    |  HornADisplaceLongitudinalZ               |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 36    |  DecayPipeTiltY                           |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 37    |  DecayPipeTiltX                           |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 38    |  DecayPipeRadius                          |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 39    |  DecayPipeLength                          |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 40    |  DecayPipeGeoBField                       |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 41    |  DecayPipeEllipticalCrossSectionYB        |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 42    |  DecayPipeEllipticalCrossSectionXA        |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 43    |  DecayPipeDisplaceTransverseY             |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 44    |  DecayPipeDisplaceTransverseX             |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 45    |  DecayPipe3SegmentBowingY                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 46    |  DecayPipe3SegmentBowingX                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 47    |  HornCDisplaceTransverseY                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 48    |  HornBDisplaceTransverseY                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 49    |  HornADisplaceTransverseY                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 50    |  HornCDisplaceTransverseX                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 51    |  HornBDisplaceTransverseX                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 52    |  HornADisplaceTransverseX                 |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 53    |  Flux_HadProd_Param_0                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 54    |  Flux_HadProd_Param_1                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 55    |  Flux_HadProd_Param_2                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 56    |  Flux_HadProd_Param_3                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 57    |  Flux_HadProd_Param_4                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 58    |  Flux_HadProd_Param_5                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 59    |  Flux_HadProd_Param_6                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 60    |  Flux_HadProd_Param_7                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 61    |  Flux_HadProd_Param_8                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 62    |  Flux_HadProd_Param_9                     |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 63    |  Flux_HadProd_Param_10                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 64    |  Flux_HadProd_Param_11                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 65    |  Flux_HadProd_Param_12                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 66    |  Flux_HadProd_Param_13                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 67    |  Flux_HadProd_Param_14                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 68    |  Flux_HadProd_Param_15                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 69    |  Flux_HadProd_Param_16                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 70    |  Flux_HadProd_Param_17                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 71    |  Flux_HadProd_Param_18                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 72    |  Flux_HadProd_Param_19                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] 73    |  Flux_HadProd_Param_20                    |  0          |  +/- 1.00   |  -3         |  3          |  0.02       |  *                    |  Functional
+[ParameterHandlerGeneric.cpp][info] ============================================================================================================================================================
+[ParameterHandlerGeneric.cpp][info] Normalisation parameters:  0
+[ParameterHandlerGeneric.cpp][info] Spline parameters: 0
+[ParameterHandlerGeneric.cpp][info] Functional parameters: 66
+[ParameterHandlerGeneric.cpp][info] ┌────┬──────────┬────────────────────────────────────────┐
+[ParameterHandlerGeneric.cpp][info] │#   │Global #  │Name                                    │
+[ParameterHandlerGeneric.cpp][info] ├────┼──────────┼────────────────────────────────────────┤
+[ParameterHandlerGeneric.cpp][info] │0   │8         │TargetUpstreamDegredation               │
+[ParameterHandlerGeneric.cpp][info] │1   │9         │TargetTiltTransverseY                   │
+[ParameterHandlerGeneric.cpp][info] │2   │10        │TargetTiltTransverseX                   │
+[ParameterHandlerGeneric.cpp][info] │3   │11        │TargetLength                            │
+[ParameterHandlerGeneric.cpp][info] │4   │12        │TargetDisplaceTransverseY               │
+[ParameterHandlerGeneric.cpp][info] │5   │13        │TargetDisplaceTransverseX               │
+[ParameterHandlerGeneric.cpp][info] │6   │14        │TargetDensity                           │
+[ParameterHandlerGeneric.cpp][info] │7   │15        │ProtonBeamTransverseY                   │
+[ParameterHandlerGeneric.cpp][info] │8   │16        │ProtonBeamTransverseX                   │
+[ParameterHandlerGeneric.cpp][info] │9   │17        │ProtonBeamRadius                        │
+[ParameterHandlerGeneric.cpp][info] │10  │18        │ProtonBeamAngleY                        │
+[ParameterHandlerGeneric.cpp][info] │11  │19        │ProtonBeamAngleX                        │
+[ParameterHandlerGeneric.cpp][info] │12  │20        │HornWaterLayerThickness                 │
+[ParameterHandlerGeneric.cpp][info] │13  │21        │HornCurrent                             │
+[ParameterHandlerGeneric.cpp][info] │14  │22        │HornCTiltTransverseY                    │
+[ParameterHandlerGeneric.cpp][info] │15  │23        │HornCTiltTransverseX                    │
+[ParameterHandlerGeneric.cpp][info] │16  │24        │HornCEllipticityXInducedBField          │
+[ParameterHandlerGeneric.cpp][info] │17  │25        │HornCEccentricityXInducedBField         │
+[ParameterHandlerGeneric.cpp][info] │18  │26        │HornCDisplaceLongitudinalZ              │
+[ParameterHandlerGeneric.cpp][info] │19  │27        │HornBTiltTransverseY                    │
+[ParameterHandlerGeneric.cpp][info] │20  │28        │HornBTiltTransverseX                    │
+[ParameterHandlerGeneric.cpp][info] │21  │29        │HornBEllipticityXInducedBField          │
+[ParameterHandlerGeneric.cpp][info] │22  │30        │HornBDisplaceLongitudinalZ              │
+[ParameterHandlerGeneric.cpp][info] │23  │31        │HornATiltTransverseY                    │
+[ParameterHandlerGeneric.cpp][info] │24  │32        │HornATiltTransverseX                    │
+[ParameterHandlerGeneric.cpp][info] │25  │33        │HornAEllipticityXInducedBField          │
+[ParameterHandlerGeneric.cpp][info] │26  │34        │HornAEccentricityXInducedBField         │
+[ParameterHandlerGeneric.cpp][info] │27  │35        │HornADisplaceLongitudinalZ              │
+[ParameterHandlerGeneric.cpp][info] │28  │36        │DecayPipeTiltY                          │
+[ParameterHandlerGeneric.cpp][info] │29  │37        │DecayPipeTiltX                          │
+[ParameterHandlerGeneric.cpp][info] │30  │38        │DecayPipeRadius                         │
+[ParameterHandlerGeneric.cpp][info] │31  │39        │DecayPipeLength                         │
+[ParameterHandlerGeneric.cpp][info] │32  │40        │DecayPipeGeoBField                      │
+[ParameterHandlerGeneric.cpp][info] │33  │41        │DecayPipeEllipticalCrossSectionYB       │
+[ParameterHandlerGeneric.cpp][info] │34  │42        │DecayPipeEllipticalCrossSectionXA       │
+[ParameterHandlerGeneric.cpp][info] │35  │43        │DecayPipeDisplaceTransverseY            │
+[ParameterHandlerGeneric.cpp][info] │36  │44        │DecayPipeDisplaceTransverseX            │
+[ParameterHandlerGeneric.cpp][info] │37  │45        │DecayPipe3SegmentBowingY                │
+[ParameterHandlerGeneric.cpp][info] │38  │46        │DecayPipe3SegmentBowingX                │
+[ParameterHandlerGeneric.cpp][info] │39  │47        │HornCDisplaceTransverseY                │
+[ParameterHandlerGeneric.cpp][info] │40  │48        │HornBDisplaceTransverseY                │
+[ParameterHandlerGeneric.cpp][info] │41  │49        │HornADisplaceTransverseY                │
+[ParameterHandlerGeneric.cpp][info] │42  │50        │HornCDisplaceTransverseX                │
+[ParameterHandlerGeneric.cpp][info] │43  │51        │HornBDisplaceTransverseX                │
+[ParameterHandlerGeneric.cpp][info] │44  │52        │HornADisplaceTransverseX                │
+[ParameterHandlerGeneric.cpp][info] │45  │53        │Flux_HadProd_Param_0                    │
+[ParameterHandlerGeneric.cpp][info] │46  │54        │Flux_HadProd_Param_1                    │
+[ParameterHandlerGeneric.cpp][info] │47  │55        │Flux_HadProd_Param_2                    │
+[ParameterHandlerGeneric.cpp][info] │48  │56        │Flux_HadProd_Param_3                    │
+[ParameterHandlerGeneric.cpp][info] │49  │57        │Flux_HadProd_Param_4                    │
+[ParameterHandlerGeneric.cpp][info] │50  │58        │Flux_HadProd_Param_5                    │
+[ParameterHandlerGeneric.cpp][info] │51  │59        │Flux_HadProd_Param_6                    │
+[ParameterHandlerGeneric.cpp][info] │52  │60        │Flux_HadProd_Param_7                    │
+[ParameterHandlerGeneric.cpp][info] │53  │61        │Flux_HadProd_Param_8                    │
+[ParameterHandlerGeneric.cpp][info] │54  │62        │Flux_HadProd_Param_9                    │
+[ParameterHandlerGeneric.cpp][info] │55  │63        │Flux_HadProd_Param_10                   │
+[ParameterHandlerGeneric.cpp][info] │56  │64        │Flux_HadProd_Param_11                   │
+[ParameterHandlerGeneric.cpp][info] │57  │65        │Flux_HadProd_Param_12                   │
+[ParameterHandlerGeneric.cpp][info] │58  │66        │Flux_HadProd_Param_13                   │
+[ParameterHandlerGeneric.cpp][info] │59  │67        │Flux_HadProd_Param_14                   │
+[ParameterHandlerGeneric.cpp][info] │60  │68        │Flux_HadProd_Param_15                   │
+[ParameterHandlerGeneric.cpp][info] │61  │69        │Flux_HadProd_Param_16                   │
+[ParameterHandlerGeneric.cpp][info] │62  │70        │Flux_HadProd_Param_17                   │
+[ParameterHandlerGeneric.cpp][info] │63  │71        │Flux_HadProd_Param_18                   │
+[ParameterHandlerGeneric.cpp][info] │64  │72        │Flux_HadProd_Param_19                   │
+[ParameterHandlerGeneric.cpp][info] │65  │73        │Flux_HadProd_Param_20                   │
+[ParameterHandlerGeneric.cpp][info] └────┴──────────┴────────────────────────────────────────┘
+[ParameterHandlerGeneric.cpp][info] Oscillation parameters: 8
+[ParameterHandlerGeneric.cpp][info] ┌────┬──────────┬────────────────────────────────────────┐
+[ParameterHandlerGeneric.cpp][info] │#   │Global #  │Name                                    │
+[ParameterHandlerGeneric.cpp][info] ├────┼──────────┼────────────────────────────────────────┤
+[ParameterHandlerGeneric.cpp][info] │0   │0         │sin2th_12                               │
+[ParameterHandlerGeneric.cpp][info] │1   │1         │sin2th_23                               │
+[ParameterHandlerGeneric.cpp][info] │2   │2         │sin2th_13                               │
+[ParameterHandlerGeneric.cpp][info] │3   │3         │delm2_12                                │
+[ParameterHandlerGeneric.cpp][info] │4   │4         │delm2_23                                │
+[ParameterHandlerGeneric.cpp][info] │5   │5         │delta_cp                                │
+[ParameterHandlerGeneric.cpp][info] │6   │6         │baseline                                │
+[ParameterHandlerGeneric.cpp][info] │7   │7         │density                                 │
+[ParameterHandlerGeneric.cpp][info] └────┴──────────┴────────────────────────────────────────┘
+[ParameterHandlerGeneric.cpp][info] Printing parameter groups
+[ParameterHandlerGeneric.cpp][info] Found 66: Flux params
+[ParameterHandlerGeneric.cpp][info] Found 8: Osc params
+[ParameterHandlerGeneric.cpp][info] Finished
+[ParameterHandlerGeneric.cpp][info] #################################################
+[ParameterHandlerBase.cpp][info] xsec_cov setStepScale() = 0.05
+[MaCh3DUNEFactory.cpp][info] No SharedNuOscillatorObject for ATM found, so not creating one
+[MaCh3DUNEFactory.cpp][info] No SharedNuOscillatorObject for BeamFD found, so not creating one
+[MaCh3DUNEFactory.cpp][info] -------------------------------------------------------------------
+[MaCh3DUNEFactory.cpp][info] Loading DUNE samples..
+[Manager.cpp][info] Setting config to be: Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml
+[Manager.cpp][info] Config is now: 
+[Monitor.cpp][info] SampleHandlerName: BeamFDStandardRecord
+[Monitor.cpp][info] MaCh3ModeConfig: Configs/CovObjs/MaCh3Modes.yaml
+[Monitor.cpp][info] BinningFile: Configs/Samples/BeamParameterBinning.yaml
+[Monitor.cpp][info] InputFiles:
+[Monitor.cpp][info]   PrepSplineFile: false
+[Monitor.cpp][info]   MCEvents:
+[Monitor.cpp][info]     - Tag: numode_nonswap
+[Monitor.cpp][info]       FileLocation: Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root
+[Monitor.cpp][info] NuOsc:
+[Monitor.cpp][info]   NuOscConfigFile: Configs/NuOsc/CUDAProb3Linear.yaml
+[Monitor.cpp][info]   EqualBinningPerOscChannel: false
+[Monitor.cpp][info] Samples: [BeamFD_numode_CCNumuLike]
+[Monitor.cpp][info] POT:
+[Monitor.cpp][info]   numode_nonswap: 1.36E23
+[Monitor.cpp][info] BeamFD_numode_CCNumuLike:
+[Monitor.cpp][info]   SampleName: BeamFD_numode_CCNumuLike
+[Monitor.cpp][info]   SampleTitle: BeamFD_numode_CCNumuLike
+[Monitor.cpp][info]   MCEventsTags: [numode_nonswap]
+[Monitor.cpp][info]   SelectionCuts:
+[Monitor.cpp][info]     - KinematicStr: RecoSample
+[Monitor.cpp][info]       Bounds: [0.5, 1.5]
+[Monitor.cpp][info]     - KinematicStr: NuPDG
+[Monitor.cpp][info]       Bounds: [13.5, 14.5]
+[Monitor.cpp][info]   Binning:
+[Monitor.cpp][info]     VarStr: TrueNeutrinoEnergy
+[Monitor.cpp][info]     Uniform: true
+[Monitor.cpp][info]     BinEdges: {linspace: {nb: 40, low: 0, up: 8}}
+[Monitor.cpp][info]   InputFiles:
+[Monitor.cpp][info]     mtupleprefix: ""
+[Monitor.cpp][info]     mtuplesuffix: ""
+[Monitor.cpp][info]     splineprefix: ""
+[Monitor.cpp][info]     splinesuffix: ""
+[Monitor.cpp][info]   OscChannels:
+[Monitor.cpp][info]     - Name: RHC_numu_x_numu
+[Monitor.cpp][info]       LatexName: RHC_numu_x_numu
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: 14
+[Monitor.cpp][info]       oscnutype: 14
+[Monitor.cpp][info]     - Name: RHC_nue_x_nue
+[Monitor.cpp][info]       LatexName: RHC_nue_x_nue
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: 12
+[Monitor.cpp][info]       oscnutype: 12
+[Monitor.cpp][info]     - Name: RHC_numubar_x_numubar
+[Monitor.cpp][info]       LatexName: RHC_numubar_x_numubar
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: -14
+[Monitor.cpp][info]       oscnutype: -14
+[Monitor.cpp][info]     - Name: RHC_nuebar_x_nuebar
+[Monitor.cpp][info]       LatexName: RHC_nuebar_x_nuebar
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: -12
+[Monitor.cpp][info]       oscnutype: -12
+[SampleHandlerBase.cpp][info] -------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Creating SampleHandlerBase object
+[Manager.cpp][info] Setting config to be: Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml
+[Manager.cpp][info] Config is now: 
+[Monitor.cpp][info] SampleHandlerName: BeamFDStandardRecord
+[Monitor.cpp][info] MaCh3ModeConfig: Configs/CovObjs/MaCh3Modes.yaml
+[Monitor.cpp][info] BinningFile: Configs/Samples/BeamParameterBinning.yaml
+[Monitor.cpp][info] InputFiles:
+[Monitor.cpp][info]   PrepSplineFile: false
+[Monitor.cpp][info]   MCEvents:
+[Monitor.cpp][info]     - Tag: numode_nonswap
+[Monitor.cpp][info]       FileLocation: Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root
+[Monitor.cpp][info] NuOsc:
+[Monitor.cpp][info]   NuOscConfigFile: Configs/NuOsc/CUDAProb3Linear.yaml
+[Monitor.cpp][info]   EqualBinningPerOscChannel: false
+[Monitor.cpp][info] Samples: [BeamFD_numode_CCNumuLike]
+[Monitor.cpp][info] POT:
+[Monitor.cpp][info]   numode_nonswap: 1.36E23
+[Monitor.cpp][info] BeamFD_numode_CCNumuLike:
+[Monitor.cpp][info]   SampleName: BeamFD_numode_CCNumuLike
+[Monitor.cpp][info]   SampleTitle: BeamFD_numode_CCNumuLike
+[Monitor.cpp][info]   MCEventsTags: [numode_nonswap]
+[Monitor.cpp][info]   SelectionCuts:
+[Monitor.cpp][info]     - KinematicStr: RecoSample
+[Monitor.cpp][info]       Bounds: [0.5, 1.5]
+[Monitor.cpp][info]     - KinematicStr: NuPDG
+[Monitor.cpp][info]       Bounds: [13.5, 14.5]
+[Monitor.cpp][info]   Binning:
+[Monitor.cpp][info]     VarStr: TrueNeutrinoEnergy
+[Monitor.cpp][info]     Uniform: true
+[Monitor.cpp][info]     BinEdges: {linspace: {nb: 40, low: 0, up: 8}}
+[Monitor.cpp][info]   InputFiles:
+[Monitor.cpp][info]     mtupleprefix: ""
+[Monitor.cpp][info]     mtuplesuffix: ""
+[Monitor.cpp][info]     splineprefix: ""
+[Monitor.cpp][info]     splinesuffix: ""
+[Monitor.cpp][info]   OscChannels:
+[Monitor.cpp][info]     - Name: RHC_numu_x_numu
+[Monitor.cpp][info]       LatexName: RHC_numu_x_numu
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: 14
+[Monitor.cpp][info]       oscnutype: 14
+[Monitor.cpp][info]     - Name: RHC_nue_x_nue
+[Monitor.cpp][info]       LatexName: RHC_nue_x_nue
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: 12
+[Monitor.cpp][info]       oscnutype: 12
+[Monitor.cpp][info]     - Name: RHC_numubar_x_numubar
+[Monitor.cpp][info]       LatexName: RHC_numubar_x_numubar
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: -14
+[Monitor.cpp][info]       oscnutype: -14
+[Monitor.cpp][info]     - Name: RHC_nuebar_x_nuebar
+[Monitor.cpp][info]       LatexName: RHC_nuebar_x_nuebar
+[Monitor.cpp][info]       mtuplefile: [""]
+[Monitor.cpp][info]       splinefile: ""
+[Monitor.cpp][info]       nutype: -12
+[Monitor.cpp][info]       oscnutype: -12
+[MaCh3Modes.cpp][info] Printing MaCh3 Modes Called: DUNE Interaction modes
+[MaCh3Modes.cpp][info] ========================================================================
+[MaCh3Modes.cpp][info] #     |  Name                 |  FancyName            |  SIMB Modes                    
+[MaCh3Modes.cpp][info] ------------------------------------------------------------------------
+[MaCh3Modes.cpp][info] 0     |  CCQE                 |  CCQE                 |  0                             
+[MaCh3Modes.cpp][info] 1     |  CC1Kaon              |  CC1Kaon              |  40                            
+[MaCh3Modes.cpp][info] 2     |  CCDIS                |  CCDIS                |  2                             
+[MaCh3Modes.cpp][info] 3     |  CCRES                |  CCRES                |  1                             
+[MaCh3Modes.cpp][info] 4     |  CCCOH                |  CCCOH                |  3                             
+[MaCh3Modes.cpp][info] 5     |  CCDiff               |  CCDiff               |  11                            
+[MaCh3Modes.cpp][info] 6     |  CCNuEl               |  CCNuEl               |  5                             
+[MaCh3Modes.cpp][info] 7     |  CCIMD                |  CCIMD                |  41                            
+[MaCh3Modes.cpp][info] 8     |  CCAnuGam             |  CCAnuGam             |  9                             
+[MaCh3Modes.cpp][info] 9     |  CCMEC                |  CCMEC                |  10                            
+[MaCh3Modes.cpp][info] 10    |  CCCOHEL              |  CCCOHEL              |  4                             
+[MaCh3Modes.cpp][info] 11    |  CCIBD                |  CCIBD                |  7                             
+[MaCh3Modes.cpp][info] 12    |  CCGlRES              |  CCGlRES              |  8                             
+[MaCh3Modes.cpp][info] 13    |  CCIMDAnn             |  CCIMDAnn             |  6                             
+[MaCh3Modes.cpp][info] 14    |  NCQE                 |  NCQE                 |  12                            
+[MaCh3Modes.cpp][info] 15    |  NCDIS                |  NCDIS                |  14                            
+[MaCh3Modes.cpp][info] 16    |  NCRES                |  NCRES                |  13                            
+[MaCh3Modes.cpp][info] 17    |  NCCOH                |  NCCOH                |  15                            
+[MaCh3Modes.cpp][info] 18    |  NCDiff               |  NCDiff               |  23                            
+[MaCh3Modes.cpp][info] 19    |  NCNuEl               |  NCNuEl               |  17                            
+[MaCh3Modes.cpp][info] 20    |  NCIMD                |  NCIMD                |  43                            
+[MaCh3Modes.cpp][info] 21    |  NCAnuGam             |  NCAnuGam             |  21                            
+[MaCh3Modes.cpp][info] 22    |  NCMEC                |  NCMEC                |  22                            
+[MaCh3Modes.cpp][info] 23    |  NCCOHEL              |  NCCOHEL              |  16                            
+[MaCh3Modes.cpp][info] 24    |  NCIBD                |  NCIBD                |  19                            
+[MaCh3Modes.cpp][info] 25    |  NCGlRES              |  NCGlRES              |  20                            
+[MaCh3Modes.cpp][info] 26    |  NCIMDAnn             |  NCIMDAnn             |  18                            
+[MaCh3Modes.cpp][info] ========================================================================
+[MaCh3Modes.cpp][info] ==========================
+[MaCh3Modes.cpp][info] SIMB Modes |  Name                          
+[MaCh3Modes.cpp][info] --------------------------
+[MaCh3Modes.cpp][info] 0          |  CCQE                          
+[MaCh3Modes.cpp][info] 1          |  CCRES                         
+[MaCh3Modes.cpp][info] 2          |  CCDIS                         
+[MaCh3Modes.cpp][info] 3          |  CCCOH                         
+[MaCh3Modes.cpp][info] 4          |  CCCOHEL                       
+[MaCh3Modes.cpp][info] 5          |  CCNuEl                        
+[MaCh3Modes.cpp][info] 6          |  CCIMDAnn                      
+[MaCh3Modes.cpp][info] 7          |  CCIBD                         
+[MaCh3Modes.cpp][info] 8          |  CCGlRES                       
+[MaCh3Modes.cpp][info] 9          |  CCAnuGam                      
+[MaCh3Modes.cpp][info] 10         |  CCMEC                         
+[MaCh3Modes.cpp][info] 11         |  CCDiff                        
+[MaCh3Modes.cpp][info] 12         |  NCQE                          
+[MaCh3Modes.cpp][info] 13         |  NCRES                         
+[MaCh3Modes.cpp][info] 14         |  NCDIS                         
+[MaCh3Modes.cpp][info] 15         |  NCCOH                         
+[MaCh3Modes.cpp][info] 16         |  NCCOHEL                       
+[MaCh3Modes.cpp][info] 17         |  NCNuEl                        
+[MaCh3Modes.cpp][info] 18         |  NCIMDAnn                      
+[MaCh3Modes.cpp][info] 19         |  NCIBD                         
+[MaCh3Modes.cpp][info] 20         |  NCGlRES                       
+[MaCh3Modes.cpp][info] 21         |  NCAnuGam                      
+[MaCh3Modes.cpp][info] 22         |  NCMEC                         
+[MaCh3Modes.cpp][info] 23         |  NCDiff                        
+[MaCh3Modes.cpp][info] 24         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 25         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 26         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 27         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 28         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 29         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 30         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 31         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 32         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 33         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 34         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 35         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 36         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 37         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 38         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 39         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 40         |  CC1Kaon                       
+[MaCh3Modes.cpp][info] 41         |  CCIMD                         
+[MaCh3Modes.cpp][info] 42         |  UNKNOWN_BAD                   
+[MaCh3Modes.cpp][info] 43         |  NCIMD                         
+[MaCh3Modes.cpp][info] ==========================
+[Manager.cpp][warning] Didn't find a TestStatistic specified
+[Manager.cpp][warning] Defaulting to using a Poisson likelihood
+[BinningHandler.cpp][info] Setting up Sample Binning
+[SampleStructs.h][info] 0-Dim Binning: [0.00, 0.20, 0.40, 0.60, 0.80, 1.00, 1.20, 1.40, 1.60, 1.80, 2.00, 2.20, 2.40, 2.60, 2.80, 3.00, 3.20, 3.40, 3.60, 3.80, 4.00, 4.20, 4.40, 4.60, 4.80, 5.00, 5.20, 5.40, 5.60, 5.80, 6.00, 6.20, 6.40, 6.60, 6.80, 7.00, 7.20, 7.40, 7.60, 7.80, 8.00]
+[SampleHandlerBase.cpp][info] Adding cut on RecoSample with bounds 0.5 to 1.5
+[SampleHandlerBase.cpp][info] Adding cut on NuPDG with bounds 13.5 to 14.5
+[SampleHandlerBase.cpp][info]   Nominal mode weights to apply: 
+[SampleHandlerBase.cpp][info]     - CCQE: 1
+[SampleHandlerBase.cpp][info]     - CC1Kaon: 1
+[SampleHandlerBase.cpp][info]     - CCDIS: 1
+[SampleHandlerBase.cpp][info]     - CCRES: 1
+[SampleHandlerBase.cpp][info]     - CCCOH: 1
+[SampleHandlerBase.cpp][info]     - CCDiff: 1
+[SampleHandlerBase.cpp][info]     - CCNuEl: 1
+[SampleHandlerBase.cpp][info]     - CCIMD: 1
+[SampleHandlerBase.cpp][info]     - CCAnuGam: 1
+[SampleHandlerBase.cpp][info]     - CCMEC: 1
+[SampleHandlerBase.cpp][info]     - CCCOHEL: 1
+[SampleHandlerBase.cpp][info]     - CCIBD: 1
+[SampleHandlerBase.cpp][info]     - CCGlRES: 1
+[SampleHandlerBase.cpp][info]     - CCIMDAnn: 1
+[SampleHandlerBase.cpp][info]     - NCQE: 1
+[SampleHandlerBase.cpp][info]     - NCDIS: 1
+[SampleHandlerBase.cpp][info]     - NCRES: 1
+[SampleHandlerBase.cpp][info]     - NCCOH: 1
+[SampleHandlerBase.cpp][info]     - NCDiff: 1
+[SampleHandlerBase.cpp][info]     - NCNuEl: 1
+[SampleHandlerBase.cpp][info]     - NCIMD: 1
+[SampleHandlerBase.cpp][info]     - NCAnuGam: 1
+[SampleHandlerBase.cpp][info]     - NCMEC: 1
+[SampleHandlerBase.cpp][info]     - NCCOHEL: 1
+[SampleHandlerBase.cpp][info]     - NCIBD: 1
+[SampleHandlerBase.cpp][info]     - NCGlRES: 1
+[SampleHandlerBase.cpp][info]     - NCIMDAnn: 1
+[SampleHandlerBeamFDStandardRecord.cpp][info] -------------------------------------------------------------------
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- Found input event descriptor: Tag: numode_nonswap, FileLocation: Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root, DownsampleFraction: 0
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- -- Adding file descriptor to Meta TChain: Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- -- Read 1.38E+24 input POT (with downsample weight of: 1.00)
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- Read 1.38E+24 total POT for tag: numode_nonswap, which has analysis POT of 1.36E+23
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- -- Adding file descriptor to cafTree TChain: Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root
+[SampleHandlerBeamFDStandardRecord.cpp][info] -- -- Read: 398684/600000 events (with downsample fraction of: 0.00)
+  Couldn't find parameter directory: FluxParameters/HadronProduction/pca_21 assuming we have 20 parameters.
+[SampleHandlerBase.cpp][info] =============================================
+[SampleHandlerBase.cpp][info] Total number of events is: 282798
+[SampleHandlerBase.cpp][info] Setting up NuOscillator..
+[OscillationHandler.cpp][info] Setting up NuOscillator::Oscillator object in OscillationChannel: 0/4
+[OscillationHandler.cpp][info] [NuOscillator] OscillatorFactory creating OscillatorBase object from config: Configs/NuOsc/CUDAProb3Linear.yaml
+[OscillationHandler.cpp][info] Setting up NuOscillator::Oscillator object in OscillationChannel: 1/4
+[OscillationHandler.cpp][info] [NuOscillator] OscillatorFactory creating OscillatorBase object from config: Configs/NuOsc/CUDAProb3Linear.yaml
+[OscillationHandler.cpp][info] Setting up NuOscillator::Oscillator object in OscillationChannel: 2/4
+[OscillationHandler.cpp][info] [NuOscillator] OscillatorFactory creating OscillatorBase object from config: Configs/NuOsc/CUDAProb3Linear.yaml
+[OscillationHandler.cpp][info] Setting up NuOscillator::Oscillator object in OscillationChannel: 3/4
+[OscillationHandler.cpp][info] [NuOscillator] OscillatorFactory creating OscillatorBase object from config: Configs/NuOsc/CUDAProb3Linear.yaml
+[SampleHandlerBase.cpp][info] Setting up Sample Binning..
+[SampleHandlerBase.cpp][info] Setting up Splines..
+[SampleHandlerBeamFDStandardRecord.cpp][info] Found 0 splines for this sample so I will not load or evaluate splines
+[SampleHandlerBase.cpp][info] Setting up Normalisation Pointers..
+[SampleHandlerBase.cpp][info] Setting up Functional Pointers..
+[SampleHandlerBase.txx][info] Registered functional shift consuming parameters: [ TargetUpstreamDegredation TargetTiltTransverseY TargetTiltTransverseX TargetLength TargetDisplaceTransverseY TargetDisplaceTransverseX TargetDensity ProtonBeamTransverseY ProtonBeamTransverseX ProtonBeamRadius ProtonBeamAngleY ProtonBeamAngleX HornWaterLayerThickness HornCurrent HornCTiltTransverseY HornCTiltTransverseX HornCEllipticityXInducedBField HornCEccentricityXInducedBField HornCDisplaceLongitudinalZ HornBTiltTransverseY HornBTiltTransverseX HornBEllipticityXInducedBField HornBDisplaceLongitudinalZ HornATiltTransverseY HornATiltTransverseX HornAEllipticityXInducedBField HornAEccentricityXInducedBField HornADisplaceLongitudinalZ DecayPipeTiltY DecayPipeTiltX DecayPipeRadius DecayPipeLength DecayPipeGeoBField DecayPipeEllipticalCrossSectionYB DecayPipeEllipticalCrossSectionXA DecayPipeDisplaceTransverseY DecayPipeDisplaceTransverseX DecayPipe3SegmentBowingY DecayPipe3SegmentBowingX HornCDisplaceTransverseY HornBDisplaceTransverseY HornADisplaceTransverseY HornCDisplaceTransverseX HornBDisplaceTransverseX HornADisplaceTransverseX ] for SampleHandler: BeamFDStandardRecord, with 0 par vals affecting 282798 events.
+[SampleHandlerBase.txx][info] Registered functional shift consuming parameters: [ Flux_HadProd_Param_0 Flux_HadProd_Param_1 Flux_HadProd_Param_2 Flux_HadProd_Param_3 Flux_HadProd_Param_4 Flux_HadProd_Param_5 Flux_HadProd_Param_6 Flux_HadProd_Param_7 Flux_HadProd_Param_8 Flux_HadProd_Param_9 Flux_HadProd_Param_10 Flux_HadProd_Param_11 Flux_HadProd_Param_12 Flux_HadProd_Param_13 Flux_HadProd_Param_14 Flux_HadProd_Param_15 Flux_HadProd_Param_16 Flux_HadProd_Param_17 Flux_HadProd_Param_18 Flux_HadProd_Param_19 Flux_HadProd_Param_20 ] for SampleHandler: BeamFDStandardRecord, with 0 par vals affecting 282798 events.
+[SampleHandlerBase.cpp][info] Setting up Additional Weight Pointers..
+[SampleHandlerBase.cpp][info] Setting up Kinematic Map..
+[SampleHandlerBase.cpp][info] Finished loading MC for BeamFDStandardRecord, it took 42.54s to finish
+[SampleHandlerBase.cpp][info] Initialising Data
+[SampleHandlerBase.cpp][info] =======================================================
+[SampleHandlerBase.cpp][warning] Found in total 1 (2.50%) empty bins for SampleHandler: BeamFDStandardRecord
+Here 4Here 5Here 6Here 7Here 8[SampleHandlerBase.cpp][info] Adding 1D data histogram: BeamFD_numode_CCNumuLike with 5831.68 events
+[Fit.cpp][info] Integrals of nominal hists: 
+[Fit.cpp][info] BeamFD_numode_CCNumuLike : 5831.6802261170105
+[Fit.cpp][info] --------------
+Here 9Here 10Here 11Here 12[FitterBase.cpp][info] Adding systematic object xsec_cov, with 74 params
+Here 13Here 14Enter FunctionAfter collision checkStart Additional InfoBefore SampleBeamFDStandardRecord[FitterBase.cpp][info] Adding BeamFDStandardRecord object, with 1 samples
+After Sample Info[FitterBase.cpp][info] After Sample Info
+After Sample[FitterBase.cpp][info] After Sample Info
+[FitterBase.cpp][info] After change to output file
+Here 15[Fit.cpp][info] Before MCMC Start
+[MCMCBase.cpp][info] Multicanonical Method: false
+[FitterBase.cpp][warning] [0;31mCurrent Total RAM usage is 0.59 GB[0m
+[FitterBase.cpp][warning] [0;31mOut of Total available RAM 125.28 GB[0m
+[FitterBase.cpp][info] #####Current Setup#####
+[FitterBase.cpp][info] Number of covariances: 1
+[FitterBase.cpp][info] 0: Cov name: xsec_cov, it has 74 params
+[FitterBase.cpp][info] Number of SampleHandlers: 1
+[FitterBase.cpp][info] 0: SampleHandler name: BeamFDStandardRecord, it has 1 samples
+[FitterBase.cpp][info]    0: Sample title: BeamFD_numode_CCNumuLike, with 4 osc channels
+[FitterBase.cpp][info] -------------------- Starting MCMC --------------------
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5831.68        0.00      |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5831.68        0.00      |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.47      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       0.00       -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -13.84     -1.28     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.37      -0.37     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.10      -0.10     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.67      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.75       0.75      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	0/100, current: 65.94, proposed: 65.94
+[MCMCBase.cpp][info] Accepted/Total steps: 0/0 = -nan
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5506.47        42.08     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5506.47        42.08     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.47      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       0.00       -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -13.84     -1.39     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.37      -0.37     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.10      -0.10     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.67      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.75       0.75      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	10/100, current: 53.99, proposed: 62.40
+[MCMCBase.cpp][info] Accepted/Total steps: 1/10 = 0.10
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5526.50        38.49     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5526.50        38.49     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.30      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.47      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -1.16      -0.66     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.66     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.20       0.20      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.73      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.90       1.90      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.67      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.38      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.29      -0.29     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	20/100, current: 51.82, proposed: 93.28
+[MCMCBase.cpp][info] Accepted/Total steps: 2/20 = 0.10
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5504.44        69.36     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5504.44        69.36     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.47      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      0.00      
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -1.04      -0.71     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.73      -0.73     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.67      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.38      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.04     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.31     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	30/100, current: 51.82, proposed: 53.83
+[MCMCBase.cpp][info] Accepted/Total steps: 2/30 = 0.07
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5562.29        29.83     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5562.29        29.83     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.55      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -1.04      -0.89     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.73      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.10     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.67      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.38      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.29     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	40/100, current: 49.81, proposed: 103.70
+[MCMCBase.cpp][info] Accepted/Total steps: 3/40 = 0.07
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5473.79        79.83     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5473.79        79.83     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.55      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      0.00      
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.80      -0.51     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.62       2.62      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.73      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.18     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.47     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.73       0.73      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.67       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.93       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.18      -0.18     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.08      -0.08     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.33      
+[MCMCBase.cpp][info] Step:	50/100, current: 48.95, proposed: 55.82
+[MCMCBase.cpp][info] Accepted/Total steps: 6/50 = 0.12
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5559.81        31.92     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5559.81        31.92     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.30      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.47      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.98      -0.29     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.63       2.63      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.20       1.20      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.69      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.72       0.72      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.68       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.39      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.31     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.19      -0.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.07      -0.07     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.33       0.33      
+[MCMCBase.cpp][info] Step:	60/100, current: 48.95, proposed: 91.85
+[MCMCBase.cpp][info] Accepted/Total steps: 6/60 = 0.10
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5480.07        67.90     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5480.07        67.90     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.55       0.55      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      0.00      
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.98      -1.15     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.63       2.63      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.20       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.81      -1.81     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.72       0.72      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.68       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.25      -0.25     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.31     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.19      -0.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.07      -0.07     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.33       0.32      
+[MCMCBase.cpp][info] Step:	70/100, current: 47.38, proposed: 103.90
+[MCMCBase.cpp][info] Accepted/Total steps: 8/70 = 0.11
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5480.04        80.05     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5480.04        80.05     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.56       0.56      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      0.00      
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.76      -0.70     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.63       2.63      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.26     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.80      -1.80     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.72       0.72      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.68       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.06      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.60       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.26      -0.26     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.19      -0.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.07      -0.07     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.33      
+[MCMCBase.cpp][info] Step:	80/100, current: 47.38, proposed: 53.50
+[MCMCBase.cpp][info] Accepted/Total steps: 8/80 = 0.10
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5570.62        29.51     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5570.62        29.51     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.56       0.46      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.76      -0.31     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.63       2.63      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.58       0.58      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.20      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.80      -1.80     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.17      -1.17     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.48      -0.48     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.72       0.72      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.68       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.06      -1.06     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.31     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.60       1.60      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.26      -0.26     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.19      -0.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.07      -0.07     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.32       0.32      
+[MCMCBase.cpp][info] Step:	90/100, current: 45.47, proposed: 45.47
+[MCMCBase.cpp][info] Accepted/Total steps: 10/90 = 0.11
+[SampleHandlerBase.cpp][info] Printing for BeamFDStandardRecord
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[SampleHandlerBase.cpp][info] Sample                                  Data           MC             -LLH      |
+[SampleHandlerBase.cpp][info] BeamFD_numode_CCNumuLike                5831.68        5611.46        21.50     |
+[SampleHandlerBase.cpp][info] Total                                   5831.68        5611.46        21.50     |
+[SampleHandlerBase.cpp][info] ---------------------------------------------------------------------------------
+[ParameterHandlerBase.cpp][info] Printing parameters for xsec_cov
+[ParameterHandlerBase.cpp][info] Name                           Prior      Current    Proposed  
+[ParameterHandlerBase.cpp][info] sin2th_12                      0.31       0.31       0.31      
+[ParameterHandlerBase.cpp][info] sin2th_23                      0.55       0.56       0.56      
+[ParameterHandlerBase.cpp][info] sin2th_13                      0.02       0.02       0.02      
+[ParameterHandlerBase.cpp][info] delm2_12                       0.00       0.00       0.00      
+[ParameterHandlerBase.cpp][info] delm2_23                       0.00       -0.00      -0.00     
+[ParameterHandlerBase.cpp][info] delta_cp                       -1.60      -0.94      -0.94     
+[ParameterHandlerBase.cpp][info] baseline                       1284.90    1284.89    1284.89   
+[ParameterHandlerBase.cpp][info] density                        2.60       2.63       2.63      
+[ParameterHandlerBase.cpp][info] TargetUpstreamDegredation      0.00       -0.52      -0.52     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseY          0.00       -0.65      -0.65     
+[ParameterHandlerBase.cpp][info] TargetTiltTransverseX          0.00       0.69       0.69      
+[ParameterHandlerBase.cpp][info] TargetLength                   0.00       0.34       0.34      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseY      0.00       0.19       0.19      
+[ParameterHandlerBase.cpp][info] TargetDisplaceTransverseX      0.00       0.57       0.57      
+[ParameterHandlerBase.cpp][info] TargetDensity                  0.00       1.19       1.19      
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseY          0.00       -0.36      -0.36     
+[ParameterHandlerBase.cpp][info] ProtonBeamTransverseX          0.00       -1.27      -1.27     
+[ParameterHandlerBase.cpp][info] ProtonBeamRadius               0.00       0.03       0.03      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleY               0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] ProtonBeamAngleX               0.00       -1.80      -1.80     
+[ParameterHandlerBase.cpp][info] HornWaterLayerThickness        0.00       -0.23      -0.23     
+[ParameterHandlerBase.cpp][info] HornCurrent                    0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseY           0.00       -0.33      -0.33     
+[ParameterHandlerBase.cpp][info] HornCTiltTransverseX           0.00       0.18       0.18      
+[ParameterHandlerBase.cpp][info] HornCEllipticityXInducedBField 0.00       0.55       0.55      
+[ParameterHandlerBase.cpp][info] HornCEccentricityXInducedBField 0.00       -0.74      -0.74     
+[ParameterHandlerBase.cpp][info] HornCDisplaceLongitudinalZ     0.00       -0.60      -0.60     
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseY           0.00       0.56       0.56      
+[ParameterHandlerBase.cpp][info] HornBTiltTransverseX           0.00       -0.91      -0.91     
+[ParameterHandlerBase.cpp][info] HornBEllipticityXInducedBField 0.00       1.64       1.64      
+[ParameterHandlerBase.cpp][info] HornBDisplaceLongitudinalZ     0.00       0.70       0.70      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseY           0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornATiltTransverseX           0.00       -1.89      -1.89     
+[ParameterHandlerBase.cpp][info] HornAEllipticityXInducedBField 0.00       -0.09      -0.09     
+[ParameterHandlerBase.cpp][info] HornAEccentricityXInducedBField 0.00       1.91       1.91      
+[ParameterHandlerBase.cpp][info] HornADisplaceLongitudinalZ     0.00       -1.18      -1.18     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltY                 0.00       -0.11      -0.11     
+[ParameterHandlerBase.cpp][info] DecayPipeTiltX                 0.00       1.57       1.57      
+[ParameterHandlerBase.cpp][info] DecayPipeRadius                0.00       -0.47      -0.47     
+[ParameterHandlerBase.cpp][info] DecayPipeLength                0.00       -0.77      -0.77     
+[ParameterHandlerBase.cpp][info] DecayPipeGeoBField             0.00       0.72       0.72      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionYB 0.00       0.10       0.10      
+[ParameterHandlerBase.cpp][info] DecayPipeEllipticalCrossSectionXA 0.00       -0.61      -0.61     
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseY   0.00       0.68       0.68      
+[ParameterHandlerBase.cpp][info] DecayPipeDisplaceTransverseX   0.00       0.37       0.37      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingY       0.00       1.40       1.40      
+[ParameterHandlerBase.cpp][info] DecayPipe3SegmentBowingX       0.00       -0.14      -0.14     
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseY       0.00       -0.93      -0.93     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseY       0.00       -1.05      -1.05     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseY       0.00       0.39       0.39      
+[ParameterHandlerBase.cpp][info] HornCDisplaceTransverseX       0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] HornBDisplaceTransverseX       0.00       -0.03      -0.03     
+[ParameterHandlerBase.cpp][info] HornADisplaceTransverseX       0.00       0.54       0.54      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_0           0.00       -0.28      -0.28     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_1           0.00       1.61       1.61      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_2           0.00       -0.26      -0.26     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_3           0.00       -0.32      -0.32     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_4           0.00       -1.19      -1.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_5           0.00       -0.31      -0.31     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_6           0.00       0.49       0.49      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_7           0.00       0.76       0.76      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_8           0.00       1.26       1.26      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_9           0.00       -1.14      -1.14     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_10          0.00       0.43       0.43      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_11          0.00       -0.05      -0.05     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_12          0.00       -1.91      -1.91     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_13          0.00       -0.70      -0.70     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_14          0.00       0.92       0.92      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_15          0.00       -0.15      -0.15     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_16          0.00       0.17       0.17      
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_17          0.00       -0.19      -0.19     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_18          0.00       -0.01      -0.01     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_19          0.00       -0.07      -0.07     
+[ParameterHandlerBase.cpp][info] Flux_HadProd_Param_20          0.00       0.33       0.33      
+[FitterBase.cpp][info] 100 steps took 3.61e+01 seconds to complete. (3.61e-01s / step).
+[FitterBase.cpp][info] 15 steps were accepted.
+[Fit.cpp][warning] [0;31mCurrent Total RAM usage is 0.60 GB[0m
+[Fit.cpp][warning] [0;31mOut of Total available RAM 125.28 GB[0m
+Complete

@@ -1,6 +1,6 @@
 ---
 General:
-  OutputFile: "DunePriorPredictiveNew.root"
+  OutputFile: "DuneMCMCOutput.root"
   DUNESamples:
    - "Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml"
   # Nu-FIT
@@ -25,8 +25,10 @@ General:
   Fitter:
     FitTestLikelihood: false
   MCMC:
-    NSteps: 2000
+    NSteps: 100
     AutoSave: 10000
+    Multicanonical:
+      Enabled: false
   Output:
     FileName: "TestEventRates.root"
     OUTPUTNAME: "TestLLH.root"
@@ -73,7 +75,7 @@ Predictive:
   # number of burn in steps
   BurnInSteps: 1000
   # Name of file from which we are sampling
-  PosteriorFile: "Test.root"
+  PosteriorFile: "DuneMCMCOutput.root"
   # Allow to specify to throw/vary only params coming from single group like Xsec. Allow to evaluate errors coming from this group. Can't be mixed with throw single param
   ThrowParamGroupOnly: ["Flux"]
   # Allow to specify to throw/vary only params coming with specified names. Cannot be connected with ThrowParamGroupOnly
