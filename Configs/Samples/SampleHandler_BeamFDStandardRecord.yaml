@@ -8,13 +8,13 @@ InputFiles:
   PrepSplineFile: false
   MCEvents:
     - Tag: numode_nonswap
-      FileLocation: "Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root"
+      FileLocation: "Inputs/DUNE_CAF_VD_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip000000_lim000060_final_20241024T024241.root"
     # If set to greater than 0, then events are skipped during reading with
     #   probability DownsampleFraction
       # DownsampleFraction: 0.5
     # uncomment this if you just want to run with all the files
     # - tag: "fhc_nonswap"
-    #   file_location: "Inputs/DUNE_CAF_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip*.root"}
+    #   file_location: "Inputs/DUNE_CAF_VD_files/fardet-vd_mc_list-merge_physics_cafmaker_dunevd10kt_1x8x6_3view_30deg_runreco-nuenergy_geov3_root-tuple_merged_skip*.root"}
 
 NuOsc:
   NuOscConfigFile: "Configs/NuOsc/CUDAProb3Linear.yaml"

@@ -3,15 +3,21 @@
 # A script to link required files to the proper place i.e. where the sample config files will look for them
 
 MACH3DIR=`pwd`
-FILESDIR=/mercury/data3/picker24/DUNE/CAFs/FDTDR
+FILESDIR=/work4/ppd/scarf1407
+FILESDIRCARA=/work4/ppd/scarf1583
 NDGAR_FILESDIR=/vols/dune/jmm224/data
 
 if [ ! -d "$MACH3DIR/Inputs/DUNE_CAF_files" ]
 then
   mkdir $MACH3DIR/Inputs/DUNE_CAF_files
 fi
-ln -sf ${FILESDIR}/*root Inputs/DUNE_CAF_files
+ln -sf ${FILESDIR}/DUNE_2023_FD_CAFs/*root Inputs/DUNE_CAF_files
 
+if [ ! -d "$MACH3DIR/Inputs/DUNE_CAF_VD_files" ]
+then
+  mkdir $MACH3DIR/Inputs/DUNE_CAF_VD_files
+fi
+ln -sf ${FILESDIRCARA}/VD2024/*root Inputs/DUNE_CAF_VD_files
 
 if [ ! -d "$MACH3DIR/Inputs/DUNE_spline_files" ]
 then
