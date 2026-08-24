@@ -19,7 +19,7 @@ General:
       - "Configs/CovObjs/BeamParameters2026.yaml"
       #- "Configs/CovObjs/tdr_covs/Flux_ND+FD.yaml"
     XsecCovName: "xsec_cov"
-    XsecStepScale: 0.5
+    XsecStepScale: 0.01
 
 
   Fitter:

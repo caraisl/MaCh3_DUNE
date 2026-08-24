@@ -1,6 +1,6 @@
 ---
 General:
-  OutputFile: "DuneMCMCOutput.root"
+  OutputFile: "Results/DuneOldUnc.root"
   DUNESamples:
    - "Configs/Samples/SampleHandler_BeamFDStandardRecord.yaml"
   # Nu-FIT
@@ -16,22 +16,22 @@ General:
   Systematics:
     XsecCovFile:
       - "Configs/CovObjs/OscCov_PDG2021_v2.yaml"
-      - "Configs/CovObjs/BeamParameters2026.yaml"
-      #- "Configs/CovObjs/tdr_covs/Flux_ND+FD.yaml"
+      #- "Configs/CovObjs/BeamParameters2026.yaml"
+      - "Configs/CovObjs/tdr_covs/Flux_FD.yaml"
     XsecCovName: "xsec_cov"
-    XsecStepScale: 0.5
+    XsecStepScale: 0.09
 
 
   Fitter:
     FitTestLikelihood: false
   MCMC:
-    NSteps: 100
+    NSteps: 50000
     AutoSave: 10000
     Multicanonical:
       Enabled: false
   Output:
-    FileName: "TestEventRates.root"
-    OUTPUTNAME: "TestLLH.root"
+    FileName: "Results/DuneOldUnc.root"
+    OUTPUTNAME: "DuneOldUnc.root"
   ProcessMCMC: No
   Seed: 0
   Debug: No
@@ -71,11 +71,11 @@ Predictive:
 #Use Full LLH or only sample contribution based on discussion with Asher we almost always only want the sample likelihood
   FullLLH: false
 #if false will run posterior predictive
-  PriorPredictive: true
+  PriorPredictive: false
   # number of burn in steps
-  BurnInSteps: 1000
+  BurnInSteps: 100
   # Name of file from which we are sampling
-  PosteriorFile: "DuneMCMCOutput.root"
+  PosteriorFile: "Results/DuneOldUnc.root"
   # Allow to specify to throw/vary only params coming from single group like Xsec. Allow to evaluate errors coming from this group. Can't be mixed with throw single param
   ThrowParamGroupOnly: ["Flux"]
   # Allow to specify to throw/vary only params coming with specified names. Cannot be connected with ThrowParamGroupOnly
@@ -90,3 +90,12 @@ Predictive:
   #ParameterBounds: [ ["delm2_23", [0, 999]], ["sin2th_23", [0.5, 1] ] ]
   # Will produce posterior predictive distributions with by mode breakdown, can be heavy on RAM
   ByMode: false
+  
+
+PredictivePlotting:
+  FileTitle: ["Posterior Predictive", "Prior Predictive"]
+  #FileTitle: ["Prior Predictive"]
+  PosteriorColor: [632, 600] # kRed, kBlue
+  RelevantModesName: ["CCQE", "CC2p2h","CC1pipm"]
+  # kRed, kMagenta+2, kGreen+1
+  RelevantModesColors: [632, 618, 417]

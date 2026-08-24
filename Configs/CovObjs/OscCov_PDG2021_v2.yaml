@@ -40,8 +40,8 @@ Systematics:
     ParameterBounds: [0, 1]
     ParameterGroup: Osc
     ParameterValues:
-      Generated: 0.546
-      PreFitValue: 0.546
+      Generated: 0.582
+      PreFitValue: 0.582
     StepScale:
       MCMC: 1.0
     Type: Oscillation
